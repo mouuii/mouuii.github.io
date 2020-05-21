@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2020-05 on Mouui</title>
+    <link>http://example.org/tags/2020-05/</link>
+    <description>Recent content in 2020-05 on Mouui</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 May 2020 20:31:55 +0800</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/2020-05/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>想读的书</title>
+      <link>http://example.org/posts/%E6%83%B3%E8%AF%BB%E7%9A%84%E4%B9%A6/</link>
+      <pubDate>Wed, 20 May 2020 20:31:55 +0800</pubDate>
+      
+      <guid>http://example.org/posts/%E6%83%B3%E8%AF%BB%E7%9A%84%E4%B9%A6/</guid>
+      <description>1.消失的爱人 2.linux</description>
+    </item>
+    
+    <item>
+      <title>unix-linux编程实践教程读书笔记</title>
+      <link>http://example.org/posts/unix-linux%E7%BC%96%E7%A8%8B%E5%AE%9E%E8%B7%B5%E6%95%99%E7%A8%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 20 May 2020 20:26:37 +0800</pubDate>
+      
+      <guid>http://example.org/posts/unix-linux%E7%BC%96%E7%A8%8B%E5%AE%9E%E8%B7%B5%E6%95%99%E7%A8%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
