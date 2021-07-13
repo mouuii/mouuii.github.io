@@ -1,6 +1,6 @@
 {
-  "name": "My New Hugo Site",
-  "short_name": "My New Hugo Site",
+  "name": "花花的博客",
+  "short_name": "花花的博客",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
