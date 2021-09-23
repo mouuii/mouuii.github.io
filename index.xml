@@ -9,7 +9,20 @@
       <link>/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 23 Sep 2021 19:41:28 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Sep 2021 19:44:04 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubeconfig</title>
+      <link>/archives/kubeconfig/</link>
+      <pubDate>Thu, 23 Sep 2021 19:44:04 +0800</pubDate>
+      
+      <guid>/archives/kubeconfig/</guid>
+      <description>背景  对于多租户多集群需要用到kubeconfig来管理公司人员权限，在k8s官网可以看到，kubeconfig使用了RBAC来 授权
+ 对于官网文档的学习 To enable RBAC , start the api server with &amp;ndash;authorization-mode flag set to a comma-deparated list that includes RBAC;for example
+ kube-apiserver &amp;ndash;authorization-mode=Example,RBAC &amp;ndash;other-options &amp;ndash;more-options
+ api objects rbac api declares four kinds of kubenetes object :
+ role clusterRole roleBinding clusterRoleBinding  A Role always sets permissions within a particular namespace; when you create a Role, you have to specify the namespace it belongs in.</description>
+    </item>
+    
     <item>
       <title>About Me</title>
       <link>/archives/about-me/</link>
