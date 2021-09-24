@@ -5,14 +5,26 @@
     <loc>/</loc>
     <lastmod>2021-09-24T15:32:58+08:00</lastmod>
   </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2021-09-24T15:32:58+08:00</lastmod>
+  </url><url>
     <loc>/posts/</loc>
     <lastmod>2021-09-24T15:32:58+08:00</lastmod>
   </url><url>
     <loc>/archives/%E5%AD%A6%E4%B9%A0markdown/</loc>
     <lastmod>2021-09-24T15:32:58+08:00</lastmod>
   </url><url>
+    <loc>/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2021-09-24T15:32:58+08:00</lastmod>
+  </url><url>
     <loc>/archives/go1.8generics/</loc>
     <lastmod>2021-09-24T15:26:34+08:00</lastmod>
+  </url><url>
+    <loc>/categories/golang/</loc>
+    <lastmod>2021-09-24T15:26:34+08:00</lastmod>
+  </url><url>
+    <loc>/categories/k8s/</loc>
+    <lastmod>2021-09-24T14:44:32+08:00</lastmod>
   </url><url>
     <loc>/archives/kubeval/</loc>
     <lastmod>2021-09-24T14:44:32+08:00</lastmod>
@@ -23,8 +35,8 @@
     <loc>/archives/about-me/</loc>
     <lastmod>2021-09-23T19:41:28+08:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2005-05-01T08:00:00+00:00</lastmod>
+    <loc>/categories/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2021-09-23T19:41:28+08:00</lastmod>
   </url><url>
     <loc>/archives/%E5%AF%82%E9%9D%99%E4%B9%8B%E5%9F%8E/</loc>
     <lastmod>2005-05-01T08:00:00+00:00</lastmod>

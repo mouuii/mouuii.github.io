@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>k8s on Bore&#39;s Notes</title>
+    <link>/categories/k8s/</link>
+    <description>Recent content in k8s on Bore&#39;s Notes</description>
+    <image>
+      <url>/papermod-cover.png</url>
+      <link>/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 24 Sep 2021 14:44:32 +0800</lastBuildDate><atom:link href="/categories/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubeval</title>
+      <link>/archives/kubeval/</link>
+      <pubDate>Fri, 24 Sep 2021 14:44:32 +0800</pubDate>
+      
+      <guid>/archives/kubeval/</guid>
+      <description>最近公司有需求是要验证k8s yaml 合法性的需求，找了下社区，决定用kubeval，但是kubeval默认会去加载 github上的 json-schema ,导致延迟很高，解决方案，将json-schema下载下来存到公司s3，延迟立马降低， 在接入kubeval golang客户端代码时候使用
+return kubeval.Validate([]byte(yamlContent), &amp;amp;kubeval.Config{SchemaLocation: &amp;#34;http://resource.koderover.com/k8s-json-scheme&amp;#34;, DefaultNamespace: &amp;#34;default&amp;#34;, KubernetesVersion: &amp;#34;master&amp;#34;})```</description>
+    </item>
+    
+    <item>
+      <title>Kubeconfig</title>
+      <link>/archives/kubeconfig/</link>
+      <pubDate>Thu, 23 Sep 2021 19:44:04 +0800</pubDate>
+      
+      <guid>/archives/kubeconfig/</guid>
+      <description>背景  对于多租户多集群需要用到kubeconfig来管理公司人员权限，在k8s官网可以看到，kubeconfig使用了RBAC来 授权
+ 对于官网文档的学习 To enable RBAC , start the api server with &amp;ndash;authorization-mode flag set to a comma-deparated list that includes RBAC;for example
+ kube-apiserver &amp;ndash;authorization-mode=Example,RBAC &amp;ndash;other-options &amp;ndash;more-options
+ api objects rbac api declares four kinds of kubenetes object :
+ role clusterRole roleBinding clusterRoleBinding  A Role always sets permissions within a particular namespace; when you create a Role, you have to specify the namespace it belongs in.</description>
+    </item>
+    
+  </channel>
+</rss>

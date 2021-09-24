@@ -9,7 +9,43 @@
       <link>/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 01 May 2005 08:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Sep 2021 15:32:58 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>工具</title>
+      <link>/categories/%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Fri, 24 Sep 2021 15:32:58 +0800</pubDate>
+      
+      <guid>/categories/%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>/categories/golang/</link>
+      <pubDate>Fri, 24 Sep 2021 15:26:34 +0800</pubDate>
+      
+      <guid>/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>k8s</title>
+      <link>/categories/k8s/</link>
+      <pubDate>Fri, 24 Sep 2021 14:44:32 +0800</pubDate>
+      
+      <guid>/categories/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>生活</title>
+      <link>/categories/%E7%94%9F%E6%B4%BB/</link>
+      <pubDate>Thu, 23 Sep 2021 19:41:28 +0800</pubDate>
+      
+      <guid>/categories/%E7%94%9F%E6%B4%BB/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>转载</title>
       <link>/categories/%E8%BD%AC%E8%BD%BD/</link>

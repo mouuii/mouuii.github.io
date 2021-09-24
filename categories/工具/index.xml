@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>工具 on Bore&#39;s Notes</title>
+    <link>/categories/%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 工具 on Bore&#39;s Notes</description>
+    <image>
+      <url>/papermod-cover.png</url>
+      <link>/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 24 Sep 2021 15:32:58 +0800</lastBuildDate><atom:link href="/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>学习markdown</title>
+      <link>/archives/%E5%AD%A6%E4%B9%A0markdown/</link>
+      <pubDate>Fri, 24 Sep 2021 15:32:58 +0800</pubDate>
+      
+      <guid>/archives/%E5%AD%A6%E4%B9%A0markdown/</guid>
+      <description># 这是一级标题 ## 这是二级标题 ### 这是三级标题 #### 这是四级标题 ##### 这是五级标题 ###### 这是六级标题  **这是加粗的文字** *这是倾斜的文字*` ***这是斜体加粗的文字*** ~~这是加删除线的文字~~ &amp;gt;这是引用的内容 --- 分割线 ![图片alt](图片地址 &amp;#39;&amp;#39;图片title&amp;#39;&amp;#39;) [超链接名](超链接地址 &amp;#34;超链接title&amp;#34;) title可加可不加 1. 列表内容 2. 列表内容 3. 列表内容 - 列表内容 + 列表内容 * 列表内容 注意：- + * 跟内容之间都要有一个空格 注意：序号跟内容之间要有空格 表头|表头|表头 ---|:--:|---: 内容|内容|内容 内容|内容|内容 第二行分割表头和内容。 - 有一个就行，为了对齐，多加了几个 文字默认居左 -两边加：表示文字居中 -右边加：表示文字居右 注：原生的语法两边都要用 | 包起来。此处省略 ```flow st=&amp;gt;start: 开始 op=&amp;gt;operation: My Operation cond=&amp;gt;condition: Yes or No? e=&amp;gt;end st-&amp;gt;op-&amp;gt;cond cond(yes)-&amp;gt;e cond(no)-&amp;gt;op &amp;amp;``` </description>
+    </item>
+    
+  </channel>
+</rss>

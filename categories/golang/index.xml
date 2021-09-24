@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>golang on Bore&#39;s Notes</title>
+    <link>/categories/golang/</link>
+    <description>Recent content in golang on Bore&#39;s Notes</description>
+    <image>
+      <url>/papermod-cover.png</url>
+      <link>/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 24 Sep 2021 15:26:34 +0800</lastBuildDate><atom:link href="/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go1.8generics</title>
+      <link>/archives/go1.8generics/</link>
+      <pubDate>Fri, 24 Sep 2021 15:26:34 +0800</pubDate>
+      
+      <guid>/archives/go1.8generics/</guid>
+      <description>一、背景 为了更好地理解Robert Griesemer的讲解，这里先带着大家回顾一下Go generics技术草案演化史。 二、代码尝鲜 package main import ( &amp;#34;fmt&amp;#34; ) // The playground now uses square brackets for type parameters. Otherwise, // the syntax of type parameter lists matches the one of regular parameter // lists except that all type parameters must have a name, and the type // parameter list cannot be empty. The predeclared identifier &amp;#34;any&amp;#34; may be // used in the position of a type parameter constraint (and only there); // it indicates that there are no constraints.</description>
+    </item>
+    
+  </channel>
+</rss>

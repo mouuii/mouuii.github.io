@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Categories | Bore&#39;s Notes</title>
+<title>k8s | Bore&#39;s Notes</title>
 <meta name="keywords" content="" />
 <meta name="description" content="本站主要用来收集整理资料、记录笔记，方便自己查询使用。">
 <meta name="author" content="">
-<link rel="canonical" href="/categories/" />
+<link rel="canonical" href="/categories/k8s/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.5e2b4101351c21e906f398ae96901791830f58d430f96f2659dab7eaef7b3cb7.css" integrity="sha256-XitBATUcIekG85iulpAXkYMPWNQw&#43;W8mWdq36u97PLc=" rel="preload stylesheet" as="style">
 <link rel="icon" href="/images/favicon.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
@@ -19,7 +19,7 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.85.0" />
-<link rel="alternate" type="application/rss+xml" href="/categories/index.xml">
+<link rel="alternate" type="application/rss+xml" href="/categories/k8s/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,15 +56,15 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Categories" />
+</noscript><meta property="og:title" content="k8s" />
 <meta property="og:description" content="本站主要用来收集整理资料、记录笔记，方便自己查询使用。" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/categories/" /><meta property="og:image" content="/papermod-cover.png"/>
+<meta property="og:url" content="/categories/k8s/" /><meta property="og:image" content="/papermod-cover.png"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/papermod-cover.png"/>
 
-<meta name="twitter:title" content="Categories"/>
+<meta name="twitter:title" content="k8s"/>
 <meta name="twitter:description" content="本站主要用来收集整理资料、记录笔记，方便自己查询使用。"/>
 
 </head>
@@ -121,7 +121,7 @@
             </li>
             <li>
                 <a href="/categories/" title="分类">
-                    <span class="active">分类</span>
+                    <span>分类</span>
                 </a>
             </li>
             <li>
@@ -142,28 +142,39 @@
         </ul>
     </nav>
 </header>
-<main class="main">
-<header class="page-header">
-    <h1>Categories</h1>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="/">主页</a>&nbsp;»&nbsp;<a href="/categories/">Categories</a></div>
+  <h1>k8s</h1>
 </header>
 
-<ul class="terms-tags">
-    <li>
-        <a href="/categories/golang/">golang <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="/categories/k8s/">k8s <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="/categories/%E5%B7%A5%E5%85%B7/">工具 <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="/categories/%E7%94%9F%E6%B4%BB/">生活 <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="/categories/%E8%BD%AC%E8%BD%BD/">转载 <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-</ul>
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Kubeval
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>最近公司有需求是要验证k8s yaml 合法性的需求，找了下社区，决定用kubeval，但是kubeval默认会去加载 github上的 json-schema ,导致延迟很高，解决方案，将json-schema下载下来存到公司s3，延迟立马降低， 在接入kubeval golang客户端代码时候使用
+return kubeval.Validate([]byte(yamlContent), &amp;kubeval.Config{SchemaLocation: &#34;http://resource.koderover.com/k8s-json-scheme&#34;, DefaultNamespace: &#34;default&#34;, KubernetesVersion: &#34;master&#34;})```</p>
+  </section>
+  <footer class="entry-footer">2021-09-24</footer>
+  <a class="entry-link" aria-label="post link to Kubeval" href="/archives/kubeval/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Kubeconfig
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>背景  对于多租户多集群需要用到kubeconfig来管理公司人员权限，在k8s官网可以看到，kubeconfig使用了RBAC来 授权
+ 对于官网文档的学习 To enable RBAC , start the api server with –authorization-mode flag set to a comma-deparated list that includes RBAC;for example
+ kube-apiserver –authorization-mode=Example,RBAC –other-options –more-options
+ api objects rbac api declares four kinds of kubenetes object :
+ role clusterRole roleBinding clusterRoleBinding  A Role always sets permissions within a particular namespace; when you create a Role, you have to specify the namespace it belongs in....</p>
+  </section>
+  <footer class="entry-footer">2021-09-23</footer>
+  <a class="entry-link" aria-label="post link to Kubeconfig" href="/archives/kubeconfig/"></a>
+</article>
     </main>
     
 <footer class="footer">
