@@ -2,6 +2,7 @@
 title: "Go1.8generics"
 date: 2021-09-24T15:26:34+08:00
 draft: false
+categories: golang
 ---
 ### 一、背景
 为了更好地理解Robert Griesemer的讲解，这里先带着大家回顾一下Go generics技术草案演化史。
