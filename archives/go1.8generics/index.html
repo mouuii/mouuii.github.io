@@ -5,12 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Kubeval | Bore&#39;s Notes</title>
+<title>Go1.8generics | Bore&#39;s Notes</title>
 <meta name="keywords" content="" />
-<meta name="description" content="最近公司有需求是要验证k8s yaml 合法性的需求，找了下社区，决定用kubeval，但是kubeval默认会去加载 github上的 json-schema ,导致延迟很高，解决方案，将json-schema下载下来存到公司s3，延迟立马降低， 在接入kubeval golang客户端代码时候使用
-return kubeval.Validate([]byte(yamlContent), &amp;kubeval.Config{SchemaLocation: &#34;http://resource.koderover.com/k8s-json-scheme&#34;, DefaultNamespace: &#34;default&#34;, KubernetesVersion: &#34;master&#34;})```">
+<meta name="description" content="一、背景 为了更好地理解Robert Griesemer的讲解，这里先带着大家回顾一下Go generics技术草案演化史。 二、代码尝鲜 package main import ( &#34;fmt&#34; ) // The playground now uses square brackets for type parameters. Otherwise, // the syntax of type parameter lists matches the one of regular parameter // lists except that all type parameters must have a name, and the type // parameter list cannot be empty. The predeclared identifier &#34;any&#34; may be // used in the position of a type parameter constraint (and only there); // it indicates that there are no constraints.">
 <meta name="author" content="">
-<link rel="canonical" href="/archives/kubeval/" />
+<link rel="canonical" href="/archives/go1.8generics/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.5e2b4101351c21e906f398ae96901791830f58d430f96f2659dab7eaef7b3cb7.css" integrity="sha256-XitBATUcIekG85iulpAXkYMPWNQw&#43;W8mWdq36u97PLc=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -58,20 +57,18 @@ return kubeval.Validate([]byte(yamlContent), &amp;kubeval.Config{SchemaLocation:
         }
 
     </style>
-</noscript><meta property="og:title" content="Kubeval" />
-<meta property="og:description" content="最近公司有需求是要验证k8s yaml 合法性的需求，找了下社区，决定用kubeval，但是kubeval默认会去加载 github上的 json-schema ,导致延迟很高，解决方案，将json-schema下载下来存到公司s3，延迟立马降低， 在接入kubeval golang客户端代码时候使用
-return kubeval.Validate([]byte(yamlContent), &amp;kubeval.Config{SchemaLocation: &#34;http://resource.koderover.com/k8s-json-scheme&#34;, DefaultNamespace: &#34;default&#34;, KubernetesVersion: &#34;master&#34;})```" />
+</noscript><meta property="og:title" content="Go1.8generics" />
+<meta property="og:description" content="一、背景 为了更好地理解Robert Griesemer的讲解，这里先带着大家回顾一下Go generics技术草案演化史。 二、代码尝鲜 package main import ( &#34;fmt&#34; ) // The playground now uses square brackets for type parameters. Otherwise, // the syntax of type parameter lists matches the one of regular parameter // lists except that all type parameters must have a name, and the type // parameter list cannot be empty. The predeclared identifier &#34;any&#34; may be // used in the position of a type parameter constraint (and only there); // it indicates that there are no constraints." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/archives/kubeval/" /><meta property="og:image" content="/papermod-cover.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-09-24T14:44:32&#43;08:00" />
-<meta property="article:modified_time" content="2021-09-24T14:44:32&#43;08:00" />
+<meta property="og:url" content="/archives/go1.8generics/" /><meta property="og:image" content="/papermod-cover.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-24T15:26:34&#43;08:00" />
+<meta property="article:modified_time" content="2021-09-24T15:26:34&#43;08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/papermod-cover.png"/>
 
-<meta name="twitter:title" content="Kubeval"/>
-<meta name="twitter:description" content="最近公司有需求是要验证k8s yaml 合法性的需求，找了下社区，决定用kubeval，但是kubeval默认会去加载 github上的 json-schema ,导致延迟很高，解决方案，将json-schema下载下来存到公司s3，延迟立马降低， 在接入kubeval golang客户端代码时候使用
-return kubeval.Validate([]byte(yamlContent), &amp;kubeval.Config{SchemaLocation: &#34;http://resource.koderover.com/k8s-json-scheme&#34;, DefaultNamespace: &#34;default&#34;, KubernetesVersion: &#34;master&#34;})```"/>
+<meta name="twitter:title" content="Go1.8generics"/>
+<meta name="twitter:description" content="一、背景 为了更好地理解Robert Griesemer的讲解，这里先带着大家回顾一下Go generics技术草案演化史。 二、代码尝鲜 package main import ( &#34;fmt&#34; ) // The playground now uses square brackets for type parameters. Otherwise, // the syntax of type parameter lists matches the one of regular parameter // lists except that all type parameters must have a name, and the type // parameter list cannot be empty. The predeclared identifier &#34;any&#34; may be // used in the position of a type parameter constraint (and only there); // it indicates that there are no constraints."/>
 
 
 <script type="application/ld+json">
@@ -88,8 +85,8 @@ return kubeval.Validate([]byte(yamlContent), &amp;kubeval.Config{SchemaLocation:
     {
       "@type": "ListItem",
       "position":  1 ,
-      "name": "Kubeval",
-      "item": "/archives/kubeval/"
+      "name": "Go1.8generics",
+      "item": "/archives/go1.8generics/"
     }
   ]
 }
@@ -98,20 +95,20 @@ return kubeval.Validate([]byte(yamlContent), &amp;kubeval.Config{SchemaLocation:
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Kubeval",
-  "name": "Kubeval",
-  "description": "最近公司有需求是要验证k8s yaml 合法性的需求，找了下社区，决定用kubeval，但是kubeval默认会去加载 github上的 json-schema ,导致延迟很高，解决方案，将json-schema下载下来存到公司s3，延迟立马降低， 在接入kubeval golang客户端代码时候使用\nreturn kubeval.Validate([]byte(yamlContent), \u0026amp;kubeval.Config{SchemaLocation: \u0026#34;http://resource.koderover.com/k8s-json-scheme\u0026#34;, DefaultNamespace: \u0026#34;default\u0026#34;, KubernetesVersion: \u0026#34;master\u0026#34;})```",
+  "headline": "Go1.8generics",
+  "name": "Go1.8generics",
+  "description": "一、背景 为了更好地理解Robert Griesemer的讲解，这里先带着大家回顾一下Go generics技术草案演化史。 二、代码尝鲜 package main import ( \u0026#34;fmt\u0026#34; ) // The playground now uses square brackets for type parameters. Otherwise, // the syntax of type parameter lists matches the one of regular parameter // lists except that all type parameters must have a name, and the type // parameter list cannot be empty. The predeclared identifier \u0026#34;any\u0026#34; may be // used in the position of a type parameter constraint (and only there); // it indicates that there are no constraints.",
   "keywords": [
     
   ],
-  "articleBody": "最近公司有需求是要验证k8s yaml 合法性的需求，找了下社区，决定用kubeval，但是kubeval默认会去加载 github上的 json-schema ,导致延迟很高，解决方案，将json-schema下载下来存到公司s3，延迟立马降低， 在接入kubeval golang客户端代码时候使用\nreturn kubeval.Validate([]byte(yamlContent), \u0026kubeval.Config{SchemaLocation: \"http://resource.koderover.com/k8s-json-scheme\", DefaultNamespace: \"default\", KubernetesVersion: \"master\"})```",
-  "wordCount" : "16",
+  "articleBody": "一、背景 为了更好地理解Robert Griesemer的讲解，这里先带着大家回顾一下Go generics技术草案演化史。 二、代码尝鲜 package main import ( \"fmt\" ) // The playground now uses square brackets for type parameters. Otherwise, // the syntax of type parameter lists matches the one of regular parameter // lists except that all type parameters must have a name, and the type // parameter list cannot be empty. The predeclared identifier \"any\" may be // used in the position of a type parameter constraint (and only there); // it indicates that there are no constraints.  func Print[T any](s []T) { for _, v := range s { fmt.Print(v) } } func main() { Print([]string{\"Hello, \", \"playground\\n\"}) Print([]int{1,2}) } ",
+  "wordCount" : "105",
   "inLanguage": "zh",
-  "datePublished": "2021-09-24T14:44:32+08:00",
-  "dateModified": "2021-09-24T14:44:32+08:00",
+  "datePublished": "2021-09-24T15:26:34+08:00",
+  "dateModified": "2021-09-24T15:26:34+08:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "/archives/kubeval/"
+    "@id": "/archives/go1.8generics/"
   },
   "publisher": {
     "@type": "Organization",
@@ -204,30 +201,70 @@ return kubeval.Validate([]byte(yamlContent), &amp;kubeval.Config{SchemaLocation:
   <header class="post-header">
     <div class="breadcrumbs"><a href="/">主页</a>&nbsp;»&nbsp;<a href="/posts/">Posts</a></div>
     <h1 class="post-title">
-      Kubeval
+      Go1.8generics
     </h1>
-    <div class="post-meta">2021-09-24&nbsp;|&nbsp;<a href="https://github.com/iwyang/iwyang.github.io/tree/develop/content/posts/kubeval.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+    <div class="post-meta">2021-09-24&nbsp;|&nbsp;<a href="https://github.com/iwyang/iwyang.github.io/tree/develop/content/posts/go1.8-generics.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
 </div>
-  </header> 
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
 
-  <div class="post-content"><p>最近公司有需求是要验证k8s yaml 合法性的需求，找了下社区，决定用kubeval，但是kubeval默认会去加载
-github上的 json-schema ,导致延迟很高，解决方案，将json-schema下载下来存到公司s3，延迟立马降低，
-在接入kubeval golang客户端代码时候使用</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang">	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">kubeval</span>.<span style="color:#a6e22e">Validate</span>([]byte(<span style="color:#a6e22e">yamlContent</span>), <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">kubeval</span>.<span style="color:#a6e22e">Config</span>{<span style="color:#a6e22e">SchemaLocation</span>: <span style="color:#e6db74">&#34;http://resource.koderover.com/k8s-json-scheme&#34;</span>, <span style="color:#a6e22e">DefaultNamespace</span>: <span style="color:#e6db74">&#34;default&#34;</span>, <span style="color:#a6e22e">KubernetesVersion</span>: <span style="color:#e6db74">&#34;master&#34;</span>})<span style="color:#e6db74">``</span><span style="color:#960050;background-color:#1e0010">`</span></code></pre></div>
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e4%b8%80%e8%83%8c%e6%99%af" aria-label="一、背景">一、背景</a></li>
+                <li>
+                    <a href="#%e4%ba%8c%e4%bb%a3%e7%a0%81%e5%b0%9d%e9%b2%9c" aria-label="二、代码尝鲜">二、代码尝鲜</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h3 id="一背景">一、背景<a hidden class="anchor" aria-hidden="true" href="#一背景">#</a></h3>
+<p>为了更好地理解Robert Griesemer的讲解，这里先带着大家回顾一下Go generics技术草案演化史。
+<img loading="lazy" src="https://tonybai.com/wp-content/uploads/go-generics-evolution-timeline.png" alt=""  />
+</p>
+<h3 id="二代码尝鲜">二、代码尝鲜<a hidden class="anchor" aria-hidden="true" href="#二代码尝鲜">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+)
+
+<span style="color:#75715e">// The playground now uses square brackets for type parameters. Otherwise,
+</span><span style="color:#75715e">// the syntax of type parameter lists matches the one of regular parameter
+</span><span style="color:#75715e">// lists except that all type parameters must have a name, and the type
+</span><span style="color:#75715e">// parameter list cannot be empty. The predeclared identifier &#34;any&#34; may be
+</span><span style="color:#75715e">// used in the position of a type parameter constraint (and only there);
+</span><span style="color:#75715e">// it indicates that there are no constraints.
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Print</span>[<span style="color:#a6e22e">T</span> <span style="color:#a6e22e">any</span>](<span style="color:#a6e22e">s</span> []<span style="color:#a6e22e">T</span>) {
+	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">s</span> {
+		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">v</span>)
+	}
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">Print</span>([]<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;Hello, &#34;</span>, <span style="color:#e6db74">&#34;playground\n&#34;</span>})
+	<span style="color:#a6e22e">Print</span>([]<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>})
+}
+</code></pre></div>
 
   </div>
 
   <footer class="post-footer">
 <nav class="paginav">
-  <a class="prev" href="/archives/go1.8generics/">
+  <a class="prev" href="/archives/%E5%AD%A6%E4%B9%A0markdown/">
     <span class="title">« 上一页</span>
     <br>
-    <span>Go1.8generics</span>
+    <span>学习markdown</span>
   </a>
-  <a class="next" href="/archives/kubeconfig/">
+  <a class="next" href="/archives/kubeval/">
     <span class="title">下一页 »</span>
     <br>
-    <span>Kubeconfig</span>
+    <span>Kubeval</span>
   </a>
 </nav>
 

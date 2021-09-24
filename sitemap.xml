@@ -3,12 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2021-09-24T14:44:32+08:00</lastmod>
-  </url><url>
-    <loc>/archives/kubeval/</loc>
-    <lastmod>2021-09-24T14:44:32+08:00</lastmod>
+    <lastmod>2021-09-24T15:32:58+08:00</lastmod>
   </url><url>
     <loc>/posts/</loc>
+    <lastmod>2021-09-24T15:32:58+08:00</lastmod>
+  </url><url>
+    <loc>/archives/%E5%AD%A6%E4%B9%A0markdown/</loc>
+    <lastmod>2021-09-24T15:32:58+08:00</lastmod>
+  </url><url>
+    <loc>/archives/go1.8generics/</loc>
+    <lastmod>2021-09-24T15:26:34+08:00</lastmod>
+  </url><url>
+    <loc>/archives/kubeval/</loc>
     <lastmod>2021-09-24T14:44:32+08:00</lastmod>
   </url><url>
     <loc>/archives/kubeconfig/</loc>

@@ -5,12 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Kubeval | Bore&#39;s Notes</title>
+<title>学习markdown | Bore&#39;s Notes</title>
 <meta name="keywords" content="" />
-<meta name="description" content="最近公司有需求是要验证k8s yaml 合法性的需求，找了下社区，决定用kubeval，但是kubeval默认会去加载 github上的 json-schema ,导致延迟很高，解决方案，将json-schema下载下来存到公司s3，延迟立马降低， 在接入kubeval golang客户端代码时候使用
-return kubeval.Validate([]byte(yamlContent), &amp;kubeval.Config{SchemaLocation: &#34;http://resource.koderover.com/k8s-json-scheme&#34;, DefaultNamespace: &#34;default&#34;, KubernetesVersion: &#34;master&#34;})```">
+<meta name="description" content="# 这是一级标题 ## 这是二级标题 ### 这是三级标题 #### 这是四级标题 ##### 这是五级标题 ###### 这是六级标题  **这是加粗的文字** *这是倾斜的文字*` ***这是斜体加粗的文字*** ~~这是加删除线的文字~~ &gt;这是引用的内容 --- 分割线 ![图片alt](图片地址 &#39;&#39;图片title&#39;&#39;) [超链接名](超链接地址 &#34;超链接title&#34;) title可加可不加 1. 列表内容 2. 列表内容 3. 列表内容 - 列表内容 &#43; 列表内容 * 列表内容 注意：- &#43; * 跟内容之间都要有一个空格 注意：序号跟内容之间要有空格 表头|表头|表头 ---|:--:|---: 内容|内容|内容 内容|内容|内容 第二行分割表头和内容。 - 有一个就行，为了对齐，多加了几个 文字默认居左 -两边加：表示文字居中 -右边加：表示文字居右 注：原生的语法两边都要用 | 包起来。此处省略 ```flow st=&gt;start: 开始 op=&gt;operation: My Operation cond=&gt;condition: Yes or No? e=&gt;end st-&gt;op-&gt;cond cond(yes)-&gt;e cond(no)-&gt;op &amp;``` ">
 <meta name="author" content="">
-<link rel="canonical" href="/archives/kubeval/" />
+<link rel="canonical" href="/archives/%E5%AD%A6%E4%B9%A0markdown/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.5e2b4101351c21e906f398ae96901791830f58d430f96f2659dab7eaef7b3cb7.css" integrity="sha256-XitBATUcIekG85iulpAXkYMPWNQw&#43;W8mWdq36u97PLc=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -58,20 +57,18 @@ return kubeval.Validate([]byte(yamlContent), &amp;kubeval.Config{SchemaLocation:
         }
 
     </style>
-</noscript><meta property="og:title" content="Kubeval" />
-<meta property="og:description" content="最近公司有需求是要验证k8s yaml 合法性的需求，找了下社区，决定用kubeval，但是kubeval默认会去加载 github上的 json-schema ,导致延迟很高，解决方案，将json-schema下载下来存到公司s3，延迟立马降低， 在接入kubeval golang客户端代码时候使用
-return kubeval.Validate([]byte(yamlContent), &amp;kubeval.Config{SchemaLocation: &#34;http://resource.koderover.com/k8s-json-scheme&#34;, DefaultNamespace: &#34;default&#34;, KubernetesVersion: &#34;master&#34;})```" />
+</noscript><meta property="og:title" content="学习markdown" />
+<meta property="og:description" content="# 这是一级标题 ## 这是二级标题 ### 这是三级标题 #### 这是四级标题 ##### 这是五级标题 ###### 这是六级标题  **这是加粗的文字** *这是倾斜的文字*` ***这是斜体加粗的文字*** ~~这是加删除线的文字~~ &gt;这是引用的内容 --- 分割线 ![图片alt](图片地址 &#39;&#39;图片title&#39;&#39;) [超链接名](超链接地址 &#34;超链接title&#34;) title可加可不加 1. 列表内容 2. 列表内容 3. 列表内容 - 列表内容 &#43; 列表内容 * 列表内容 注意：- &#43; * 跟内容之间都要有一个空格 注意：序号跟内容之间要有空格 表头|表头|表头 ---|:--:|---: 内容|内容|内容 内容|内容|内容 第二行分割表头和内容。 - 有一个就行，为了对齐，多加了几个 文字默认居左 -两边加：表示文字居中 -右边加：表示文字居右 注：原生的语法两边都要用 | 包起来。此处省略 ```flow st=&gt;start: 开始 op=&gt;operation: My Operation cond=&gt;condition: Yes or No? e=&gt;end st-&gt;op-&gt;cond cond(yes)-&gt;e cond(no)-&gt;op &amp;``` " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/archives/kubeval/" /><meta property="og:image" content="/papermod-cover.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-09-24T14:44:32&#43;08:00" />
-<meta property="article:modified_time" content="2021-09-24T14:44:32&#43;08:00" />
+<meta property="og:url" content="/archives/%E5%AD%A6%E4%B9%A0markdown/" /><meta property="og:image" content="/papermod-cover.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-24T15:32:58&#43;08:00" />
+<meta property="article:modified_time" content="2021-09-24T15:32:58&#43;08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/papermod-cover.png"/>
 
-<meta name="twitter:title" content="Kubeval"/>
-<meta name="twitter:description" content="最近公司有需求是要验证k8s yaml 合法性的需求，找了下社区，决定用kubeval，但是kubeval默认会去加载 github上的 json-schema ,导致延迟很高，解决方案，将json-schema下载下来存到公司s3，延迟立马降低， 在接入kubeval golang客户端代码时候使用
-return kubeval.Validate([]byte(yamlContent), &amp;kubeval.Config{SchemaLocation: &#34;http://resource.koderover.com/k8s-json-scheme&#34;, DefaultNamespace: &#34;default&#34;, KubernetesVersion: &#34;master&#34;})```"/>
+<meta name="twitter:title" content="学习markdown"/>
+<meta name="twitter:description" content="# 这是一级标题 ## 这是二级标题 ### 这是三级标题 #### 这是四级标题 ##### 这是五级标题 ###### 这是六级标题  **这是加粗的文字** *这是倾斜的文字*` ***这是斜体加粗的文字*** ~~这是加删除线的文字~~ &gt;这是引用的内容 --- 分割线 ![图片alt](图片地址 &#39;&#39;图片title&#39;&#39;) [超链接名](超链接地址 &#34;超链接title&#34;) title可加可不加 1. 列表内容 2. 列表内容 3. 列表内容 - 列表内容 &#43; 列表内容 * 列表内容 注意：- &#43; * 跟内容之间都要有一个空格 注意：序号跟内容之间要有空格 表头|表头|表头 ---|:--:|---: 内容|内容|内容 内容|内容|内容 第二行分割表头和内容。 - 有一个就行，为了对齐，多加了几个 文字默认居左 -两边加：表示文字居中 -右边加：表示文字居右 注：原生的语法两边都要用 | 包起来。此处省略 ```flow st=&gt;start: 开始 op=&gt;operation: My Operation cond=&gt;condition: Yes or No? e=&gt;end st-&gt;op-&gt;cond cond(yes)-&gt;e cond(no)-&gt;op &amp;``` "/>
 
 
 <script type="application/ld+json">
@@ -88,8 +85,8 @@ return kubeval.Validate([]byte(yamlContent), &amp;kubeval.Config{SchemaLocation:
     {
       "@type": "ListItem",
       "position":  1 ,
-      "name": "Kubeval",
-      "item": "/archives/kubeval/"
+      "name": "学习markdown",
+      "item": "/archives/%E5%AD%A6%E4%B9%A0markdown/"
     }
   ]
 }
@@ -98,20 +95,20 @@ return kubeval.Validate([]byte(yamlContent), &amp;kubeval.Config{SchemaLocation:
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Kubeval",
-  "name": "Kubeval",
-  "description": "最近公司有需求是要验证k8s yaml 合法性的需求，找了下社区，决定用kubeval，但是kubeval默认会去加载 github上的 json-schema ,导致延迟很高，解决方案，将json-schema下载下来存到公司s3，延迟立马降低， 在接入kubeval golang客户端代码时候使用\nreturn kubeval.Validate([]byte(yamlContent), \u0026amp;kubeval.Config{SchemaLocation: \u0026#34;http://resource.koderover.com/k8s-json-scheme\u0026#34;, DefaultNamespace: \u0026#34;default\u0026#34;, KubernetesVersion: \u0026#34;master\u0026#34;})```",
+  "headline": "学习markdown",
+  "name": "学习markdown",
+  "description": "# 这是一级标题 ## 这是二级标题 ### 这是三级标题 #### 这是四级标题 ##### 这是五级标题 ###### 这是六级标题  **这是加粗的文字** *这是倾斜的文字*` ***这是斜体加粗的文字*** ~~这是加删除线的文字~~ \u0026gt;这是引用的内容 --- 分割线 ![图片alt](图片地址 \u0026#39;\u0026#39;图片title\u0026#39;\u0026#39;) [超链接名](超链接地址 \u0026#34;超链接title\u0026#34;) title可加可不加 1. 列表内容 2. 列表内容 3. 列表内容 - 列表内容 + 列表内容 * 列表内容 注意：- + * 跟内容之间都要有一个空格 注意：序号跟内容之间要有空格 表头|表头|表头 ---|:--:|---: 内容|内容|内容 内容|内容|内容 第二行分割表头和内容。 - 有一个就行，为了对齐，多加了几个 文字默认居左 -两边加：表示文字居中 -右边加：表示文字居右 注：原生的语法两边都要用 | 包起来。此处省略 ```flow st=\u0026gt;start: 开始 op=\u0026gt;operation: My Operation cond=\u0026gt;condition: Yes or No? e=\u0026gt;end st-\u0026gt;op-\u0026gt;cond cond(yes)-\u0026gt;e cond(no)-\u0026gt;op \u0026amp;``` ",
   "keywords": [
     
   ],
-  "articleBody": "最近公司有需求是要验证k8s yaml 合法性的需求，找了下社区，决定用kubeval，但是kubeval默认会去加载 github上的 json-schema ,导致延迟很高，解决方案，将json-schema下载下来存到公司s3，延迟立马降低， 在接入kubeval golang客户端代码时候使用\nreturn kubeval.Validate([]byte(yamlContent), \u0026kubeval.Config{SchemaLocation: \"http://resource.koderover.com/k8s-json-scheme\", DefaultNamespace: \"default\", KubernetesVersion: \"master\"})```",
-  "wordCount" : "16",
+  "articleBody": "# 这是一级标题 ## 这是二级标题 ### 这是三级标题 #### 这是四级标题 ##### 这是五级标题 ###### 这是六级标题  **这是加粗的文字** *这是倾斜的文字*` ***这是斜体加粗的文字*** ~~这是加删除线的文字~~ 这是引用的内容 --- 分割线 ![图片alt](图片地址 ''图片title'') [超链接名](超链接地址 \"超链接title\") title可加可不加 1. 列表内容 2. 列表内容 3. 列表内容 - 列表内容 + 列表内容 * 列表内容 注意：- + * 跟内容之间都要有一个空格 注意：序号跟内容之间要有空格 表头|表头|表头 ---|:--:|---: 内容|内容|内容 内容|内容|内容 第二行分割表头和内容。 - 有一个就行，为了对齐，多加了几个 文字默认居左 -两边加：表示文字居中 -右边加：表示文字居右 注：原生的语法两边都要用 | 包起来。此处省略 ```flow st=start: 开始 op=operation: My Operation cond=condition: Yes or No? e=end st-op-cond cond(yes)-e cond(no)-op \u0026``` ",
+  "wordCount" : "69",
   "inLanguage": "zh",
-  "datePublished": "2021-09-24T14:44:32+08:00",
-  "dateModified": "2021-09-24T14:44:32+08:00",
+  "datePublished": "2021-09-24T15:32:58+08:00",
+  "dateModified": "2021-09-24T15:32:58+08:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "/archives/kubeval/"
+    "@id": "/archives/%E5%AD%A6%E4%B9%A0markdown/"
   },
   "publisher": {
     "@type": "Organization",
@@ -204,30 +201,75 @@ return kubeval.Validate([]byte(yamlContent), &amp;kubeval.Config{SchemaLocation:
   <header class="post-header">
     <div class="breadcrumbs"><a href="/">主页</a>&nbsp;»&nbsp;<a href="/posts/">Posts</a></div>
     <h1 class="post-title">
-      Kubeval
+      学习markdown
     </h1>
-    <div class="post-meta">2021-09-24&nbsp;|&nbsp;<a href="https://github.com/iwyang/iwyang.github.io/tree/develop/content/posts/kubeval.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+    <div class="post-meta">2021-09-24&nbsp;|&nbsp;<a href="https://github.com/iwyang/iwyang.github.io/tree/develop/content/posts/%e5%ad%a6%e4%b9%a0markdown.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
 </div>
   </header> 
 
-  <div class="post-content"><p>最近公司有需求是要验证k8s yaml 合法性的需求，找了下社区，决定用kubeval，但是kubeval默认会去加载
-github上的 json-schema ,导致延迟很高，解决方案，将json-schema下载下来存到公司s3，延迟立马降低，
-在接入kubeval golang客户端代码时候使用</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang">	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">kubeval</span>.<span style="color:#a6e22e">Validate</span>([]byte(<span style="color:#a6e22e">yamlContent</span>), <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">kubeval</span>.<span style="color:#a6e22e">Config</span>{<span style="color:#a6e22e">SchemaLocation</span>: <span style="color:#e6db74">&#34;http://resource.koderover.com/k8s-json-scheme&#34;</span>, <span style="color:#a6e22e">DefaultNamespace</span>: <span style="color:#e6db74">&#34;default&#34;</span>, <span style="color:#a6e22e">KubernetesVersion</span>: <span style="color:#e6db74">&#34;master&#34;</span>})<span style="color:#e6db74">``</span><span style="color:#960050;background-color:#1e0010">`</span></code></pre></div>
+  <div class="post-content"><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"># 这是一级标题
+<span style="color:#75715e">## 这是二级标题
+</span><span style="color:#75715e">### 这是三级标题
+</span><span style="color:#75715e">#### 这是四级标题
+</span><span style="color:#75715e">##### 这是五级标题
+</span><span style="color:#75715e">###### 这是六级标题
+</span><span style="color:#75715e"></span>
+<span style="font-weight:bold">**这是加粗的文字**</span>
+<span style="font-style:italic">*这是倾斜的文字*</span><span style="color:#e6db74">`
+</span><span style="color:#e6db74">***这是斜体加粗的文字***
+</span><span style="color:#e6db74">~~这是加删除线的文字~~
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">&gt;这是引用的内容
+</span><span style="color:#e6db74">--- 分割线
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">![图片alt](图片地址 &#39;&#39;图片title&#39;&#39;)
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">[超链接名](超链接地址 &#34;超链接title&#34;)
+</span><span style="color:#e6db74">title可加可不加
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">1. 列表内容
+</span><span style="color:#e6db74">2. 列表内容
+</span><span style="color:#e6db74">3. 列表内容
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">- 列表内容
+</span><span style="color:#e6db74">+ 列表内容
+</span><span style="color:#e6db74">* 列表内容
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">注意：- + * 跟内容之间都要有一个空格
+</span><span style="color:#e6db74">注意：序号跟内容之间要有空格
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">表头|表头|表头
+</span><span style="color:#e6db74">---|:--:|---:
+</span><span style="color:#e6db74">内容|内容|内容
+</span><span style="color:#e6db74">内容|内容|内容
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">第二行分割表头和内容。
+</span><span style="color:#e6db74">- 有一个就行，为了对齐，多加了几个
+</span><span style="color:#e6db74">文字默认居左
+</span><span style="color:#e6db74">-两边加：表示文字居中
+</span><span style="color:#e6db74">-右边加：表示文字居右
+</span><span style="color:#e6db74">注：原生的语法两边都要用 | 包起来。此处省略
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">`</span>``flow
+st=&gt;start: 开始
+op=&gt;operation: My Operation
+cond=&gt;condition: Yes or No?
+e=&gt;end
+st-&gt;op-&gt;cond
+cond(yes)-&gt;e
+cond(no)-&gt;op
+<span style="color:#960050;background-color:#1e0010">&amp;</span>```
+</code></pre></div>
 
   </div>
 
   <footer class="post-footer">
 <nav class="paginav">
-  <a class="prev" href="/archives/go1.8generics/">
-    <span class="title">« 上一页</span>
-    <br>
-    <span>Go1.8generics</span>
-  </a>
-  <a class="next" href="/archives/kubeconfig/">
+  <a class="next" href="/archives/go1.8generics/">
     <span class="title">下一页 »</span>
     <br>
-    <span>Kubeconfig</span>
+    <span>Go1.8generics</span>
   </a>
 </nav>
 
