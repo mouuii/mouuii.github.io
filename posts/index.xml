@@ -9,7 +9,17 @@
       <link>/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 23 Sep 2021 19:44:04 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Sep 2021 14:44:32 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubeval</title>
+      <link>/archives/kubeval/</link>
+      <pubDate>Fri, 24 Sep 2021 14:44:32 +0800</pubDate>
+      
+      <guid>/archives/kubeval/</guid>
+      <description>最近公司有需求是要验证k8s yaml 合法性的需求，找了下社区，决定用kubeval，但是kubeval默认会去加载 github上的 json-schema ,导致延迟很高，解决方案，将json-schema下载下来存到公司s3，延迟立马降低， 在接入kubeval golang客户端代码时候使用
+return kubeval.Validate([]byte(yamlContent), &amp;amp;kubeval.Config{SchemaLocation: &amp;#34;http://resource.koderover.com/k8s-json-scheme&amp;#34;, DefaultNamespace: &amp;#34;default&amp;#34;, KubernetesVersion: &amp;#34;master&amp;#34;})```</description>
+    </item>
+    
     <item>
       <title>Kubeconfig</title>
       <link>/archives/kubeconfig/</link>
